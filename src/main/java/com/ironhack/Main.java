@@ -1,17 +1,55 @@
 package com.ironhack;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Main  {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        /*
+        Podría hacer quizá alguna class abstract que cree un arraylist para ambos ¿?
+        O MEJOR un méthod en la interface que cree un arrayList donde entren todos o el arraylist ¿? ¿?
+
+Eres el dueño de dos tiendas de diferente tipo y queremos que los clientes se inscriban para un mismo sorteo.
+
+Tenemos una papelería y una tienda de informática.
+Crear un interface sorteoClientes que contenga los métodos inscribirDatos()
+(nombre y telefono) y comunicarResultado() para que los clientes puedan apuntarse al sorteo desde ambas tiendas,
+y que puedan conocer el resultado en ambos casos ("ha salido ganador el número tal").
+
++EXTRA: una vez te funcione el interface, crea un sorteo random,
+por ejemplo número del 1 al 1000, y comunica ese número en comunicarResultado()
+
+         */
+
+        Papeleria papeleria = new Papeleria();
+
+        Informateria informateria = new Informateria();
+
+        papeleria.inscribirDatos("josefa", 65478451);
+
+        informateria.inscribirDatos("jose", 68475214);
+
+        papeleria.inscribirDatos("antonio", 65478451);
+
+        informateria.inscribirDatos("dolores", 68475214);
+
+        papeleria.inscribirDatos("extenuació", 65478451);
+
+        informateria.inscribirDatos("paco", 68475214);
+
+        papeleria.inscribirDatos("edelmetrio", 65478451);
+
+        informateria.inscribirDatos("hemeroskopeion", 68475214);
+
+        papeleria.inscribirDatos("valak", 65478451);
+
+        informateria.inscribirDatos("vino", 68475214);
+
+
+
+        informateria.comunicarResultado();
+
+
+
+
+
     }
 }
